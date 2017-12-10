@@ -20,3 +20,41 @@ If you doesn't use Carthage, add **New Run Script Phase** and input `/usr/local/
 Add `$(SRCROOT)/Carthage/Build/{Platform}/PolyKit.framework` to **Input Files**.
 
 
+# Usage
+
+## Download assets from Poly API.
+
+```swift
+import PolyKit
+
+let query = PolyAssetsQuery(keywords: "Cat", format: Poly3DFormat.obj)
+let polyApi = PolyAPI(apiKey: "Poly API Key is HERE!!!")
+polyApi.assets(with: query) { (result) in
+    switch result {
+    case .success(let assets):
+        self.dataSource.assets = assets.assets ?? []
+    case .failure(_):
+        self.showFetchFailedAlert()
+    }
+}
+```
+
+## Download `.obj` and `.mtl` from Poly API.
+
+```swift
+import PolyKit
+
+let asset: PolyAsset = ...
+// Download obj and mtl files from Poly
+asset.downloadObj { (result) in
+    switch result {
+    case .success(let localUrl):
+        let mdlAsset = MDLAsset(url: localUrl)
+        mdlAsset.loadTextures()
+        let node = SCNNode(mdlObject: mdlAsset.object(at: 0))
+        // do something with node
+    case .failure(let error):
+        debugPrint(#function, "error", error)
+    }
+}
+```

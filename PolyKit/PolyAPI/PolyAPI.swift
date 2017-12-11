@@ -90,6 +90,7 @@ public class PolyAPI {
     ///   - userId: String
     ///   - query: PolyUsersAssetsQuery
     ///   - result: UserAssetsResponse
+    @available (*, unavailable)
     public func usersAssets(with userId: String, and query: PolyUsersAssetsQuery?, result: @escaping UserAssetsResponse) {
         let assetsUrl = URL(string: String(format: "%@/v1/users/%@/assets", PolyConstants.domain, userId))!
         var components = URLComponents(url: assetsUrl, resolvingAgainstBaseURL: false)!
@@ -119,6 +120,7 @@ public class PolyAPI {
     ///   - userId: String
     ///   - query: PolyUsersLikedassetsQuery
     ///   - result: ListResponse
+    @available (*, unavailable)
     public func usersLikedAssets(with userId: String, and query: PolyUsersLikedAssetsQuery?, result: @escaping ListResponse) {
         let likedUrl = URL(string: String(format: "%@/v1/users/%@/likedassets", PolyConstants.domain, userId))!
         var components = URLComponents(url: likedUrl, resolvingAgainstBaseURL: false)!

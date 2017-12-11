@@ -22,7 +22,23 @@ Add `$(SRCROOT)/Carthage/Build/{Platform}/PolyKit.framework` to **Input Files**.
 
 # Usage
 
-## Download assets from Poly API.
+## Fetch asset from Poly API.
+
+```swift
+import PolyKit
+
+let polyApi = PolyAPI(apiKey: "Poly API Key is HERE!!!")
+polyApi.asset("dYKICaHpK0c") { (result) in
+    switch result {
+    case .success(let asset):
+        self.showPreview(with: asset)
+    case .failure(let error):
+        self.showFetchFailedAlert()
+    }
+}
+```
+
+## Fetch assets from Poly API.
 
 ```swift
 import PolyKit

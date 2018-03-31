@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/fromkk/PolyKit.svg?branch=master)](https://travis-ci.org/fromkk/PolyKit)
+
 #  PolyKit
 
 `PolyKit` is wrapper library for [Poly API](https://developers.google.com/poly/) with Swift.

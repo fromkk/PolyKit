@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD332424206FB1120026F0DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD332423206FB1120026F0DA /* Foundation.framework */; };
 		AD4C525E1FDCE6BA001AC731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD4C525D1FDCE6BA001AC731 /* Assets.xcassets */; };
 		AD4C52611FDCE6BA001AC731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD4C525F1FDCE6BA001AC731 /* LaunchScreen.storyboard */; };
 		AD4C526C1FDCE6BA001AC731 /* PolyKitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4C526B1FDCE6BA001AC731 /* PolyKitSampleTests.swift */; };
@@ -66,13 +67,6 @@
 			remoteGlobalIDString = AD4C52781FDCE6CF001AC731;
 			remoteInfo = PolyKit;
 		};
-		AD4C52851FDCE6CF001AC731 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AD4C52491FDCE698001AC731 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AD4C52521FDCE6BA001AC731;
-			remoteInfo = PolyKitSample;
-		};
 		AD4C528C1FDCE6CF001AC731 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD4C52491FDCE698001AC731 /* Project object */;
@@ -97,6 +91,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD332423206FB1120026F0DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		AD4C52531FDCE6BA001AC731 /* PolyKitSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolyKitSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4C525D1FDCE6BA001AC731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD4C52601FDCE6BA001AC731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -170,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD332424206FB1120026F0DA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +363,7 @@
 		AD4C52E31FDCE85A001AC731 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AD332423206FB1120026F0DA /* Foundation.framework */,
 				AD4C52E81FDCE86C001AC731 /* ModelIO.framework */,
 				AD4C52E61FDCE862001AC731 /* SceneKit.framework */,
 				AD4C52E41FDCE85B001AC731 /* ARKit.framework */,
@@ -455,7 +452,6 @@
 			);
 			dependencies = (
 				AD4C52841FDCE6CF001AC731 /* PBXTargetDependency */,
-				AD4C52861FDCE6CF001AC731 /* PBXTargetDependency */,
 			);
 			name = PolyKitTests;
 			productName = PolyKitTests;
@@ -488,7 +484,6 @@
 					AD4C52801FDCE6CF001AC731 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = AD4C52521FDCE6BA001AC731;
 					};
 				};
 			};
@@ -620,11 +615,6 @@
 			isa = PBXTargetDependency;
 			target = AD4C52781FDCE6CF001AC731 /* PolyKit */;
 			targetProxy = AD4C52831FDCE6CF001AC731 /* PBXContainerItemProxy */;
-		};
-		AD4C52861FDCE6CF001AC731 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AD4C52521FDCE6BA001AC731 /* PolyKitSample */;
-			targetProxy = AD4C52851FDCE6CF001AC731 /* PBXContainerItemProxy */;
 		};
 		AD4C528D1FDCE6CF001AC731 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1088,7 +1078,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = K84E4S7G4C;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1117,7 +1107,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolyKitSample.app/PolyKitSample";
 			};
 			name = Debug;
 		};
@@ -1155,7 +1144,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = K84E4S7G4C;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1176,7 +1165,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolyKitSample.app/PolyKitSample";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

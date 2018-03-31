@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             ])
         
         let query = PolyAssetsQuery(keywords: "Cat", format: Poly3DFormat.obj)
-        let polyApi = PolyAPI(apiKey: /* Poly API Key is HERE!!! */)
+        let polyApi = PolyAPI(apiKey: "Your PolyAPI Token is here")
         polyApi.assets(with: query) { (result) in
             switch result {
             case .success(let assets):

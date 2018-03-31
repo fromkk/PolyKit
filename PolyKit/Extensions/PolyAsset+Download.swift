@@ -75,7 +75,7 @@ public extension PolyAsset {
             }
             
             if let resources = currentFormat?.resources {
-                result += resources.flatMap({ (file) -> URL? in
+                result += resources.compactMap({ (file) -> URL? in
                     guard let url = file.url else { return nil }
                     return URL(string: url)
                 })
